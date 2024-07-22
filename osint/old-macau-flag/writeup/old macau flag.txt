@@ -1,0 +1,10 @@
+
+
+
+https://i.ebayimg.com/images/g/DUoAAOxy7rdREOun/s-l1600.jpg
+
+the official dimensions of the flag, MOCSCTF{logo width of the length,logo height of the length}
+
+MOCSCTF{1/5,7/30}
+
+https://en.wikipedia.org/wiki/Flag_of_Portugal

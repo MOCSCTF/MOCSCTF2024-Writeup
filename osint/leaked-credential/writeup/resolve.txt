@@ -1,0 +1,18 @@
+1. Go to GitHub code search website
+http://cs.github.com
+
+2. search below pattern and find below result
+/ssh.*@.*mocsctf\.com/
+
+MOCSCTF/MOCSCTF.github.io · README.en.md
+
+// use ssh key to connect
+// this is an SSH public key
+// ssh-rsa AAAAB3NzaC1yc2ETU9DU0NURntHIXRodTZfRDByayFuNX0= username@ssh.mocsctf.com
+
+
+3. SSH-RSA Keys begin with "AAAAB3NzaC1yc2E", the rest is the flag in base64 format
+TU9DU0NURntHIXRodTZfRDByayFuNX0=
+
+4. Decode the flag and get the answer.
+MOCSCTF{G!thu6_D0rk!n5}

@@ -1,0 +1,29 @@
+I just took an investment class and I learnt that one of the techniques to manage buy and sell stocks is by observing simple moving average trend ofstock closing price (https://www.nirmalbang.com/knowledge-center/use-moving-average-for-buying-stocks.html). For example, if the 5 day moving average of stock price becomes higher than it's 10 day moving average we can buy the stock and when the 10 day moving average becomes lower than 5 day moving average then we sell the stock. I got some stock market data about stock 00941 (00941.csv) and I got a "secret card" from the professor of my investment class. Can you help me to verify if I can get profit from this technique?
+
+Secret card:
+8213 - y
+8240 - h
+8260 - 9
+8270 - 3
+8309 - n
+8340 - 0
+8402 - m
+8410 - k
+8437 - _
+8454 - 7
+8460 - j
+8475 - 5
+8500 - a
+8503 - @
+8520 - f
+8545 - _ 
+8550 - $
+8573 - 7
+8587 - 0
+8595 - g
+8597 - y
+8602 - u
+8605 - 0
+8607 - _
+
+The flag format is MOCSCTF{}

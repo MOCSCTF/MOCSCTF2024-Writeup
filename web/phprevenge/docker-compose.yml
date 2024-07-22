@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  web:
+    build: .
+    image: tarn/phprevenge
+    restart: always
+    ports:
+      - "30304:80"
+    environment:
+      - FLAG=MOCSCTF{N0_b0dyyyyy_kn0w_Better_Php_Than_me}

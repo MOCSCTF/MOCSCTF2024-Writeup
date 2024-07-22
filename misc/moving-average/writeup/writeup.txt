@@ -1,0 +1,9 @@
+1. From the challenge, it seems you need to calculate moving average 5 and 10 days according to what you learnt in your investment class
+
+2. You can observe 24/04/2013 is a date that triggered buy signal and 22/05/2013 you got sell signal.
+
+3. You can observe that the close price from 24/04/2013 to 21/05/2013 can match the information in your secret card.
+
+4. Transform the close price to secret card information you can get the flag (adding format MOCSCTF{}): MOCSCTF{y0u_g07_f@57_m0n3y}
+
+Code for this challenge in Python can be referred to solve.py.

@@ -1,0 +1,57 @@
+the webapp have a ECB padding vulnerability, registering the following account
+
+1.
+username: "AA"
+displayname: "AAAAAA"
+
+2.
+username: "BB"
+displayname: "              0}" //14 spaces and 0}
+
+3.
+username: "CC"
+displayname: "AAAA"
+
+in the cookies, account 1's block 3 is "AAAAAA: "uid": ", account 2's block 3 is "              0}", account 3's block 4 is empty block,
+
+snipping account 2's block 3 to account 1's block 4 and appending the empty block from account 3 can craft a token with the uid 0, 
+indicating an admin account, 
+and visit the user page gives flag
+
+AA cookies
+
+3c9b1832b1dceeb4 <-
+84d95739078ea2b3 <-
+fd0a2f4f0efe026c <-
+6e22962f53705c8e <-
+4dde52266d726f63 <-
+a652a830af7d8856 <-
+ec2c8bf1761178f4
+b9a64856f14bbe0f
+
+BB cookies
+
+786f588607a120f7
+628474ce1936e8db
+fd0a2f4f0efe026c
+6e22962f53705c8e
+ed8f72b050eabb56 <-
+9dc00a756c42f447 <-
+318251f4415460ad
+6a440c0bd47c64ea
+
+CC cookies
+
+3d9374cb0d308e20
+0b04eb0eb1f35923
+fd0a2f4f0efe026c
+6e22962f53705c8e
+e928e7d2a580b7ef
+1b56e9e8c79a811d
+9b2256379047ff37 <-
+ad4af96da5610886 <-
+
+
+Completed craft: "3c9b1832b1dceeb484d95739078ea2b3fd0a2f4f0efe026c6e22962f53705c8e4dde52266d726f63a652a830af7d8856ed8f72b050eabb569dc00a756c42f4479b2256379047ff37ad4af96da5610886"
+
+

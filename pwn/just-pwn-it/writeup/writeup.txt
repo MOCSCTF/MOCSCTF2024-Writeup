@@ -1,0 +1,11 @@
+As a no-source, no-binary challenge, the only thing we could do is to keep trying stuff.
+We do get something interesting, the first thing we should notice is that the address never changes.
+This could mean that PIE, ASLR is not there, so it could be a simple rip overwrite, as advertised.
+
+As we keep trying, we will notice the program crash at some point.
+Eventually, we will confirm that the program crashed after 136 bytes.
+So it makes sense to assume that the saved rip starts at the 137 byte.
+
+However, if we just supply the leaked address 0x4011e6, it doesn't work.
+What could be wrong? Well, at this point, as a pwn player, the 'simplest' thing to try is stack alignment.
+If you try this, you win!   

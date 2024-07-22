@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RUST shop 🦀️🦀️</title>
+</head>
+<body>
+    <h1>🦀️🦀️🦀️🦀️🦀️🦀️🦀️🦀️🦀️🦀️🦀️🦀️</h1>
+    <div>
+        <button onclick="register()">注册用户</button>
+    </div>
+    <div id="balance"></div>
+    <div>
+        <input type="number" id="amount" placeholder="增加金额">
+        <button onclick="addBalance()">增加余额</button>
+    </div>
+    <div>
+        <button onclick="buyFlag()">购买flag</button>
+    </div>
+    <div id="message"></div>
+
+    <script>
+        let userId = '';
+
+        async function register() {
+            const response = await fetch('/register', { method: 'POST' });
+            const data = await response.json();
+            userId = data.user_id;
+            document.getElementById('message').innerText = `Registered user ID: ${userId}`;
+        }
+
+        async function getBalance() {
+            // This would be updated to call a balance endpoint
+            document.getElementById('balance').innerText = `User ID: ${userId}`;
+        }
+
+        async function addBalance() {
+            const amount = document.getElementById('amount').value;
+            const response = await fetch('/add_balance', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `user_id=${userId}&amount=${amount}`
+            });
+            const result = await response.text();
+            document.getElementById('message').innerText = result;
+            getBalance();
+        }
+
+        async function buyFlag() {
+            const response = await fetch('/buy_flag', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `user_id=${userId}`
+            });
+            const result = await response.text();
+            document.getElementById('message').innerText = result;
+        }
+
+        register();
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+1. you may try to cut part of the symbol to Bing to ask what is it. With some try you should get those symbols are Maya symbol. One kind of Maya Symbol is Maya Glyph.
+
+2. Google Maya Glyph you can get what those symbol mean (It's a matter of time...)
+
+Flag: MOCSCTF{CTF_IS_FUN} 

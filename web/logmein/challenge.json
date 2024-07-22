@@ -1,0 +1,12 @@
+{
+    "name": "LogMeIn",
+    "category": "Crypto",
+    "author": "nikobelic29",
+    "description": "You could try sqlmap I guess idk don't ask me",
+    "flag": "MOCSCTF{i_l0v3_sqlmapping_myg0t}",
+    "points": 500,
+    "internal-port": 9996,
+    "files": [
+      "share.zip"
+    ]
+  }

@@ -1,0 +1,4 @@
+I am the ZeroTrustBot. I will not share my password to you.
+https://poe.com/ZeroTrustBot1
+
+The flag format is MOCSCTF{<PASSWORD>}
